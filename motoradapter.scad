@@ -14,7 +14,7 @@ module DmmBoltAndScrewHole(posX,posY,D)
   { 
    $fn=50;   
     translate([posX,posY,0]) 
-    { cylinder(h=2,r=D+2); }   
+    { cylinder(h=2,r=D+1.5); }   
     translate([posX,posY,-1]) 
     { cylinder(h=10,r=D); }   
   }
@@ -39,8 +39,8 @@ translate([22,-14,0]) { cylinder(h=thickness,r=8.5);   }
 translate([-34,0,0]) { cylinder(h=thickness,r=8.5);   } 
 translate([64,0,0]) { cylinder(h=thickness,r=8.5);   }   
 
-translate([10,20,0]) { cylinder(h=thickness,r=8.5);   }  
-translate([10,-20,0]) { cylinder(h=thickness,r=8.5);   }  
+translate([12,22,0]) { cylinder(h=thickness,r=8.5);   }  
+translate([12,-22,0]) { cylinder(h=thickness,r=8.5);   }  
 
  difference()
    {     

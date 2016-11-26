@@ -18,7 +18,7 @@ module bottomChassis()
     {  
     translate([0,0,0])
     {
-    import("/home/ammar/Documents/Objects/zmr250_gopro_mount.stl");
+    import("/home/ammar/Documents/Objects/Drone/zmr250_gopro_mount.stl");
     }
    }
    translate([-30,-34,-14]){ cube([40, 46, 10]); }
