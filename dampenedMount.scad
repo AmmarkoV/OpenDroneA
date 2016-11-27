@@ -15,7 +15,7 @@ module bracket()
  }
  
  
-   translate([-17,-40,-15]){ cube([14, 60, 15]); }
+   translate([-15.5,-40,-15]){ cube([12, 60, 15]); }
    translate([-37,-40,-15]){ cube([10, 60, 15]); }
    translate([8,-40,-15]){ cube([10, 60, 15]); }
  
@@ -42,16 +42,16 @@ module bottomChassis()
     //Vida desimatos 
     rotate([90,0,45])   
     {      
-     translate([-8,-10,-23])
+     translate([-4.0,-10,-23])
      {
         vida();
      }
     }
        
-    rotate([45,0,45])   
+    rotate([90,0,45])   
     {      
-    translate([-11,-10,-19])
-     { cube([10, 10, 5]); }
+    translate([-11,-16,-25])
+     { cube([14, 12 , 9]); }
     }
     
   }  
