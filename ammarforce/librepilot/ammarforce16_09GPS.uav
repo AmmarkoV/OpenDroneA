@@ -7,10 +7,10 @@
     </version>
     <settings>
         <object id="0x1262B2D0" name="AccelGyroSettings">
-            <field values="-0.288477361,-0.499059379,1.12935543" name="accel_bias"/>
-            <field values="1,1,1" name="accel_scale"/>
+            <field values="0.0488853157,-0.151499063,0.6669572" name="accel_bias"/>
+            <field values="0.992513001,0.996856451,0.99386555" name="accel_scale"/>
             <field values="0,0,0" name="accel_temp_coeff"/>
-            <field values="-0.00064852566,0.00311149983,-0.00664880825" name="gyro_bias"/>
+            <field values="-0.993292749,-0.107621953,-0.272560984" name="gyro_bias"/>
             <field values="1,1,1" name="gyro_scale"/>
             <field values="0,0,0,0,0,0" name="gyro_temp_coeff"/>
             <field values="0,0" name="temp_calibrated_extent"/>
@@ -50,7 +50,7 @@
         </object>
         <object id="0xB20D3DE" name="AttitudeSettings">
             <field values="0,0,90" name="BoardRotation"/>
-            <field values="0,0" name="BoardLevelTrim"/>
+            <field values="1.37037325,-1.02084756" name="BoardLevelTrim"/>
             <field values="0.0500000007" name="AccelKp"/>
             <field values="9.99999975e-05" name="AccelKi"/>
             <field values="9.99999997e-07" name="MagKi"/>
@@ -181,12 +181,12 @@
             <field values="100" name="UpdatePeriod"/>
         </object>
         <object id="0x387E8F46" name="HomeLocation">
-            <field values="0" name="Latitude"/>
-            <field values="0" name="Longitude"/>
-            <field values="0" name="Altitude"/>
-            <field values="0,0,0" name="Be"/>
+            <field values="353011516" name="Latitude"/>
+            <field values="250788152" name="Longitude"/>
+            <field values="100" name="Altitude"/>
+            <field values="281.116455,20.6200237,351.312958" name="Be"/>
             <field values="9.81000042" name="g_e"/>
-            <field values="False" name="Set"/>
+            <field values="True" name="Set"/>
         </object>
         <object id="0x9DC5032A" name="HwSettings">
             <field values="PWM+NoOneShot" name="CC_RcvrPort"/>
@@ -320,8 +320,8 @@
             <field values="None" name="Input"/>
         </object>
         <object id="0x9A5BA08" name="RevoCalibration">
-            <field values="0,0,0" name="mag_bias"/>
-            <field values="1,0,0,0,1,0,0,0,1" name="mag_transform"/>
+            <field values="108.554428,137.894928,47.1248703" name="mag_bias"/>
+            <field values="0.824560821,0,0,0,0.866949379,0,0,0,1.10131168" name="mag_transform"/>
             <field values="0" name="MagBiasNullingRate"/>
             <field values="True" name="BiasCorrectedRaw"/>
         </object>
@@ -459,7 +459,7 @@
             <field values="30" name="AirSpeedMax"/>
             <field values="10" name="AirSpeedMin"/>
             <field values="QuadX" name="AirframeType"/>
-            <field values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" name="VehicleName"/>
+            <field values="65,109,109,97,114,70,111,114,99,101,0,0,0,0,0,0,0,0,0,0" name="VehicleName"/>
             <field values="Throttle" name="ThrustControl"/>
         </object>
         <object id="0xD292FDCC" name="TakeOffLocation">
