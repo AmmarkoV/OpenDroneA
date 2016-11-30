@@ -7,7 +7,7 @@ module bracket()
     {  
     translate([0,0,0])
     {
-    import("/home/ammar/Documents/Objects/Drone/zmr250_gopro_mount.stl");
+    import("../stl/zmr250_gopro_mount.stl");
     }
    }
    
