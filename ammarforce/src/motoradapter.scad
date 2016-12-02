@@ -25,6 +25,10 @@ translate([12,-22,0]) { cylinder(h=thickness,r=8.5);   }
      //3mm screws to chassis   
      DmmBolt(-22,0,1.5); 
      DmmBolt(22,0,1.5); 
+     
+     //First bolt is configurable  
+     DmmBolt(50,0,1.5); 
+     DmmBolt(51,0,1.5); 
      DmmBolt(52,0,1.5);  
         
      //Less material towards where screws axis   
