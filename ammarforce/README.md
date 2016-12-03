@@ -4,6 +4,9 @@
 
 The AmmarForce quadcopter is a medium sized drone geared towards flying time and carrying capacity.
 It weights 1.6kg with maximum load 2.5kg more.
+With the GoPro mounted on it ( which is a negligible weight ) it can fly for around half an hour before the lipo cells fall low enough.
+
+In this repository there are the blueprints for the body , along with the configuration of the librepilot CC3D revo controller in order to 3d print it and produce a working copy.
 
 ## Below is a part list :
 
