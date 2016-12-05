@@ -35,6 +35,9 @@ module vida()
 
 module bottomChassis()
 { 
+
+
+
  difference()
  {   
    bracket();
@@ -48,11 +51,20 @@ module bottomChassis()
      }
     }
        
+    //Xoros gia paksimadi eksodou
     rotate([90,0,45])   
     {      
     translate([-11,-16,-25])
      { cube([14, 12 , 9]); }
     }
+
+    //Xoros gia paksimadi eisodou
+    rotate([90,0,45])   
+    {      
+    translate([-6.5,-16,23])
+     { cube([14, 12 , 9]); }
+    }
+
     
   }  
 }
