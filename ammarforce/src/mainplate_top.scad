@@ -13,7 +13,7 @@ module cosmeticCylinder(posX,posY,D)
     }   
   }
    
-module mainPlatePlusCosmetics()
+module mainPlateTopPlusCosmetics()
 {
   translate([-61,-61,0]) 
        { 
@@ -28,11 +28,11 @@ module mainPlatePlusCosmetics()
 
 
 
-module mainPlateBottom()
+module mainPlateTop()
 {
  difference()
    {      
-       mainPlatePlusCosmetics();
+       mainPlateTopPlusCosmetics();
        
        //Center hole..
        DmmBolt( 0, 0,20);  
@@ -100,4 +100,4 @@ module mainPlateBottom()
 }
 
 
-mainPlateBottom();
+mainPlateTop();

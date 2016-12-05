@@ -2,7 +2,7 @@ use <holes.scad>;
 
 thickness=3; //3 mm
    
-module bracket()
+module boom()
 { 
    difference()
    {  
@@ -12,11 +12,11 @@ module bracket()
 }  
 
 
-module drilledBracket()
+module drilledBoom()
 {
   difference()
    {
-      bracket();
+      boom();
       DmmBolt(7 ,0 ,1.5); 
       DmmBolt(33 ,0 ,1.5); 
       DmmBolt(243 ,0 ,1); 
@@ -29,4 +29,4 @@ module drilledBracket()
     
 }
  
-drilledBracket();
+drilledBoom();

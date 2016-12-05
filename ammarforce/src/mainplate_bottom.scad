@@ -1,8 +1,11 @@
 use <battery.scad>;
+use <batteryCradle.scad>;
 use <holes.scad>;
 
 thickness=4; //4mm thickness of part
 drawBattery=0;
+
+
 
 module cosmeticCylinder(posX,posY,D)
   { 
@@ -13,7 +16,7 @@ module cosmeticCylinder(posX,posY,D)
     }   
   }
    
-module mainPlatePlusCosmetics()
+module mainPlateBottomPlusCosmetics()
 {
   translate([-61,-61,0]) 
        { 
@@ -24,7 +27,9 @@ module mainPlatePlusCosmetics()
   if (drawBattery)
   {
    translate([0,0,thickness+0.1]) 
-   { battery(); }
+   { 
+     battery();  
+   }
   }  
 
   // Back Battery Safety screw
@@ -53,17 +58,12 @@ module mainPlateBottom()
 {
  difference()
    {      
-       mainPlatePlusCosmetics();
+       mainPlateBottomPlusCosmetics();
        
        //Center hole..
        DmmBolt( 0, 0,10);  
        
-       //Battery holder holes
-       DmmBolt( 15,-31,1.5);  
-       DmmBolt( -15,-31,1.5);  
-       DmmBolt( 15,31,1.5);  
-       DmmBolt( -15,31,1.5);  
-       
+       //Battery holder holes 
        //Battery safety screw
        DmmBolt( -85, 0,3);  
        //Battery latch screw
@@ -73,8 +73,10 @@ module mainPlateBottom()
        //Line Drills
        removeRectangle(-40,-1.5,15,3);
        removeRectangle(25,-1.5,15,3);
-       rotate([0,0,90]){ removeRectangle(-40,-1.5,15,3); }
-       rotate([0,0,90]){ removeRectangle(25,-1.5,15,3); }
+       
+       //These interfere with the battery cradle
+       //rotate([0,0,90]){ removeRectangle(-40,-1.5,15,3); }
+       //rotate([0,0,90]){ removeRectangle(25,-1.5,15,3); }
        
        
        // holes bottom left
@@ -91,6 +93,7 @@ module mainPlateBottom()
        DmmBolt( 51, 51,3);  
        DmmBolt( 33, 31,3);  
       
+       batteryCradle();
        
      }
 }
