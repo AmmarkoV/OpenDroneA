@@ -1,19 +1,31 @@
 use <holes.scad>;
 thickness=4; //4mm thickness of part
+motorHeight=35;  //35mm height of motor
+
+module motorSafetyPlastic()
+{
+    translate([0,0,thickness]) 
+      { cylinder(h=motorHeight,r=18.5);   }   
+
+    translate([0,0,thickness]) 
+      { cylinder(h=15,r=20.5);   }  
+      
+    translate([0,0,thickness]) 
+      { cylinder(h=8,r=22.5);   }   
+    
+}
 
 module motorSafety()
 {
- motorHeight=35;  
 
   difference()
    {       
-    translate([0,0,thickness]) 
-      { cylinder(h=motorHeight,r=18.5);   }   
+    motorSafetyPlastic();   
     translate([0,0,thickness]) 
       { cylinder(h=motorHeight+1,r=16.5);   } 
-   translate([10,-10,thickness]) 
-   {  
-    cube([20, 20, motorHeight+2]); 
+       translate([-30,-5,thickness]) 
+      {  
+    cube([60, 10, 14]); 
    } 
              
   }  
@@ -49,6 +61,12 @@ translate([64,0,0]) { cylinder(h=thickness,r=8.5);   }
 translate([12,22,0]) { cylinder(h=thickness,r=8.5);   }  
 
 translate([12,-22,0]) { cylinder(h=thickness,r=8.5);   }  
+
+translate([0,22,0])  { cylinder(h=thickness,r=8.5); }  
+translate([0,-22,0]) { cylinder(h=thickness,r=8.5); }  
+
+translate([-12,22,0])  { cylinder(h=thickness,r=8.5); }  
+translate([-12,-22,0]) { cylinder(h=thickness,r=8.5); }  
 
  difference()
    {
