@@ -1,24 +1,61 @@
 use <holes.scad>;
 thickness=4; //4mm thickness of part
 
+module motorSafety()
+{
+ motorHeight=35;  
+
+  difference()
+   {       
+    translate([0,0,thickness]) 
+      { cylinder(h=motorHeight,r=18.5);   }   
+    translate([0,0,thickness]) 
+      { cylinder(h=motorHeight+1,r=16.5);   } 
+   translate([10,-10,thickness]) 
+   {  
+    cube([20, 20, motorHeight+2]); 
+   } 
+             
+  }  
+}
+
+
+module motorPlastic()
+{
+
+//Cylinder in the edge of the part
+translate([-30,0,0]) 
+    { cylinder(h=thickness,r=15.0); }
+
+translate([-35,-22.5,0]) 
+    { cube([100, 45, thickness]); } 
+    
+}
+
+
 module motorAdapter()
 {
+
+motorSafety();
+
+
+
 
 translate([22,14,0]) { cylinder(h=thickness,r=8.5);   }   
 translate([22,-14,0]) { cylinder(h=thickness,r=8.5);   }   
 
-translate([-34,0,0]) { cylinder(h=thickness,r=8.5);   } 
 translate([64,0,0]) { cylinder(h=thickness,r=8.5);   }   
 
 translate([12,22,0]) { cylinder(h=thickness,r=8.5);   }  
+
 translate([12,-22,0]) { cylinder(h=thickness,r=8.5);   }  
 
  difference()
-   {     
-    {
-     translate([-35,-22.5,0]) { cube([100, 45, thickness]); } 
-    }
-    {
+   {
+    //Motor plastic   
+    motorPlastic();     
+     
+       
      //Big hole in 0,0   
      DmmBolt(0,0,4.4); 
         
@@ -67,11 +104,11 @@ translate([12,-22,0]) { cylinder(h=thickness,r=8.5);   }
 
      
      //Cosmetic holes
-     DmmBolt(-34,20,7.4); 
-     DmmBolt(-34,-20,7.4); 
+     DmmBolt(-30,20,10.0); 
+     DmmBolt(-30,-20,10.0); 
           
   
-    }
+     
    }
    
       
