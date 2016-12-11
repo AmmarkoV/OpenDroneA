@@ -1,13 +1,24 @@
 use <holes.scad>;
 
-thickness=3; //3 mm
+dimension=10; //10 mm
+thickness=1; //1 mm
    
 module boom()
 { 
+ holedim=dimension - (2 * thickness);   
    difference()
    {  
-    translate([0,-5,0]) { cube([285, 10, 10]); } 
-    translate([-5,-2.5,2.5]) { cube([295, 5, 5]); } 
+    translate([0,-(dimension/2),0]) 
+     { cube([285,dimension,dimension]); } 
+    
+    translate(
+               [ 
+                -5,
+                -1 * ( (dimension/2) - thickness ) ,             thickness
+               ]
+              ) 
+    { cube([295, holedim, holedim]); } 
+      
    }
 }  
 

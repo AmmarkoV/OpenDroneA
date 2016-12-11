@@ -1,10 +1,12 @@
 
+boltHeight=100;
+
 module DmmBolt(posX,posY,D)
   { 
    $fn=50;   
     translate([posX,posY,-1]) 
     {  
-      cylinder(h=20,r=D);  
+      cylinder(h=boltHeight,r=D);  
     }   
   }
   
@@ -16,7 +18,7 @@ module DmmBolt(posX,posY,D)
     {
     translate([posX,posY,-7]) 
     {  
-      cylinder(h=20,r=D);  
+      cylinder(h=boltHeight,r=D);  
     }  
    } 
   }
