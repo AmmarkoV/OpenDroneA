@@ -1,3 +1,15 @@
+//THIS PART IS TOO WEAK 
+//PLA PLASTIC PRINT FAILED..
+
+
+
+
+
+
+
+
+
+
 use <holes.scad>;
 use <motorsafety.scad>;
 thickness=4; //4mm thickness of part
