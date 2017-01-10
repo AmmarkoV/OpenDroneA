@@ -1,16 +1,16 @@
 <!DOCTYPE UAVObjects>
 <uavobjects>
     <version>
-        <hardware revision="3" type="9" serial="3b0029001351353133393336"/>
-        <firmware hash="8a5367d8" uavo="1a8886cd" tag="16.09-RC2" date="20161006 20:53"/>
-        <gcs hash="8a5367d8" uavo="1a8886cd" tag="16.09-RC2" date="20161006 20:53"/>
+        <hardware serial="3b0029001351353133393336" type="9" revision="3"/>
+        <firmware tag="16.09" date="20161212 23:37" uavo="086dc116" hash="4952aa59"/>
+        <gcs tag="16.09" date="20161212 23:37" uavo="086dc116" hash="4952aa59"/>
     </version>
     <settings>
         <object name="AccelGyroSettings" id="0x1262B2D0">
-            <field name="accel_bias" values="0.0463742651,-0.266886681,1.02557075"/>
-            <field name="accel_scale" values="0.992753208,0.996474147,0.997651637"/>
+            <field name="accel_bias" values="0.0418872423,-0.213690341,0.70393312"/>
+            <field name="accel_scale" values="0.992353797,0.996695995,0.993199468"/>
             <field name="accel_temp_coeff" values="0,0,0"/>
-            <field name="gyro_bias" values="-1.09108496,-0.722623289,0.66751188"/>
+            <field name="gyro_bias" values="-1.10362911,-0.445133924,0.751704574"/>
             <field name="gyro_scale" values="1,1,1"/>
             <field name="gyro_temp_coeff" values="0,0,0,0,0,0"/>
             <field name="temp_calibrated_extent" values="0,0"/>
@@ -18,7 +18,7 @@
         <object name="ActuatorSettings" id="0x4C6AEAE2">
             <field name="BankUpdateFreq" values="0,0,0,50,50,50"/>
             <field name="ChannelMax" values="1900,1900,1900,1900,1000,1000,1000,1000,1000,1000,1000,1000"/>
-            <field name="ChannelNeutral" values="1116,1116,1116,1116,1000,1000,1000,1000,1000,1000,1000,1000"/>
+            <field name="ChannelNeutral" values="1062,1061,1059,1063,1000,1000,1000,1000,1000,1000,1000,1000"/>
             <field name="ChannelMin" values="1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000"/>
             <field name="BankMode" values="PWMSync,PWMSync,PWMSync,PWM,PWM,PWM"/>
             <field name="ChannelType" values="PWM,PWM,PWM,PWM,PWM,PWM,PWM,PWM,PWM,PWM,PWM,PWM"/>
@@ -50,7 +50,7 @@
         </object>
         <object name="AttitudeSettings" id="0xB20D3DE">
             <field name="BoardRotation" values="0,0,0"/>
-            <field name="BoardLevelTrim" values="0.0687700212,0.678662837"/>
+            <field name="BoardLevelTrim" values="-0.439695269,0.974422872"/>
             <field name="AccelKp" values="0.0500000007"/>
             <field name="AccelKi" values="9.99999975e-05"/>
             <field name="MagKi" values="9.99999997e-07"/>
@@ -64,11 +64,11 @@
             <field name="TrimFlight" values="NORMAL"/>
         </object>
         <object name="AuxMagSettings" id="0xC380EF60">
-            <field name="mag_bias" values="21.3431358,41.6688538,-44.7253685"/>
-            <field name="mag_transform" values="0.936906636,0,0,0,0.914386451,0,0,0,1.10005534"/>
+            <field name="mag_bias" values="0,0,0"/>
+            <field name="mag_transform" values="1,0,0,0,1,0,0,0,1"/>
             <field name="MagBiasNullingRate" values="0"/>
             <field name="BoardRotation" values="0,0,0"/>
-            <field name="Type" values="Flexi"/>
+            <field name="Type" values="GPSV9"/>
             <field name="Usage" values="OnboardOnly"/>
         </object>
         <object name="CameraStabSettings" id="0x8E30D4B4">
@@ -181,10 +181,10 @@
             <field name="UpdatePeriod" values="100"/>
         </object>
         <object name="HomeLocation" id="0x387E8F46">
-            <field name="Latitude" values="353011516"/>
-            <field name="Longitude" values="250788152"/>
-            <field name="Altitude" values="100"/>
-            <field name="Be" values="281.116455,20.6200237,351.312958"/>
+            <field name="Latitude" values="353053151"/>
+            <field name="Longitude" values="250732094"/>
+            <field name="Altitude" values="50"/>
+            <field name="Be" values="281.108154,20.6678238,351.387878"/>
             <field name="g_e" values="9.81000042"/>
             <field name="Set" values="True"/>
         </object>
@@ -320,8 +320,8 @@
             <field name="Input" values="None"/>
         </object>
         <object name="RevoCalibration" id="0x9A5BA08">
-            <field name="mag_bias" values="-46.6363068,16.9212227,-6.72567177"/>
-            <field name="mag_transform" values="0.981954634,0,0,0,0.96263361,0,0,0,1.26311982"/>
+            <field name="mag_bias" values="-24.6722374,9.9559269,-18.1730976"/>
+            <field name="mag_transform" values="0.851138651,0,0,0,0.913357675,0,0,0,1.19823587"/>
             <field name="MagBiasNullingRate" values="0"/>
             <field name="BiasCorrectedRaw" values="True"/>
         </object>
@@ -433,12 +433,13 @@
             <field name="ThrustPIDScaleTarget" values="PID"/>
             <field name="ThrustPIDScaleAxes" values="Roll Pitch"/>
         </object>
-        <object name="SystemIdentSettings" id="0x51A78F64">
+        <object name="SystemIdentSettings" id="0xCECA91B6">
             <field name="Tau" values="-4"/>
             <field name="Beta" values="10,10,7"/>
             <field name="YawToRollPitchPIDRatioMin" values="1"/>
             <field name="YawToRollPitchPIDRatioMax" values="2.5"/>
             <field name="DerivativeFactor" values="1"/>
+            <field name="OuterLoopKpSoftClamp" values="6.5"/>
             <field name="SmoothQuickValue" values="0"/>
             <field name="GyroReadTimeAverage" values="0.00100000005"/>
             <field name="DampMin" values="90"/>
@@ -459,13 +460,13 @@
             <field name="AirSpeedMax" values="30"/>
             <field name="AirSpeedMin" values="10"/>
             <field name="AirframeType" values="QuadX"/>
-            <field name="VehicleName" values="65,109,109,97,114,70,111,114,99,101,0,0,0,0,0,0,0,0,0,0"/>
+            <field name="VehicleName" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
             <field name="ThrustControl" values="Throttle"/>
         </object>
         <object name="TakeOffLocation" id="0xD292FDCC">
             <field name="North" values="0"/>
             <field name="East" values="0"/>
-            <field name="Down" values="0"/>
+            <field name="Down" values="2.16789699"/>
             <field name="Mode" values="ArmingLocation"/>
             <field name="Status" values="Invalid"/>
         </object>
