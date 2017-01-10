@@ -17,7 +17,7 @@
         </object>
         <object name="ActuatorSettings" id="0x4C6AEAE2">
             <field name="BankUpdateFreq" values="0,0,0,50,50,50"/>
-            <field name="ChannelMax" values="1900,1900,1900,1900,1000,1000,1000,1000,1000,1000,1000,1000"/>
+            <field name="ChannelMax" values="1860,1860,1860,1860,1000,1000,1000,1000,1000,1000,1000,1000"/>
             <field name="ChannelNeutral" values="1062,1061,1059,1063,1000,1000,1000,1000,1000,1000,1000,1000"/>
             <field name="ChannelMin" values="1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000"/>
             <field name="BankMode" values="PWMSync,PWMSync,PWMSync,PWM,PWM,PWM"/>
