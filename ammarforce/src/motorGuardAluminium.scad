@@ -9,6 +9,7 @@ perimeterWidth=6; //mm thickness of part
 motorHeight=35;  //35mm height of motor
 s=1.5; //Screw size = 1.5 mm ( 3mm diameter )
 
+extraBrackets=0;
 
 
 module bumper()
@@ -32,6 +33,8 @@ module bracketsThatHoldBumper()
   translate([-3,-175,0])  { cube([6,150,thickness]);}     
   translate([-175,-3,0])  { cube([150,6,thickness]);}  
   
+if (extraBrackets)
+{   
   rotate([0,0,45])
   {  
    translate([-175,-3,0])  { cube([150,6,thickness]);}  
@@ -40,6 +43,7 @@ module bracketsThatHoldBumper()
   {  
    translate([-175,-3,0])  { cube([150,6,thickness]);}  
   }    
+}
 }
 
  module motorPlateAdapter()
